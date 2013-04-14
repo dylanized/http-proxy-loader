@@ -1,6 +1,7 @@
 var http = require('http'),
 httpProxy = require('http-proxy');
 
+// TODO: set path via argument
 var sites = require('.config');
 
 var options = {
