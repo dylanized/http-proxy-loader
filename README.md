@@ -1,4 +1,4 @@
-http-proxy-boilerplate
+http-proxy-loader
 ======================
 
 Simple boilerplate script for running node-http-proxy.
