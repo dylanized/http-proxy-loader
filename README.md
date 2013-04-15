@@ -1,9 +1,7 @@
 http-proxy-loader
 ======================
 
-Simple boilerplate script for running node-http-proxy.
-
-This script routes domains/subdomains to their matching localhost port. The routing information is stored in its own file, config.json.
+Simple boilerplate script for running node-http-proxy, which routes domains/subdomains to their matching localhost port. The routing information is stored in its own file, config.json.
 
 HOW TO RUN:
 ---
