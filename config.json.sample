@@ -1,4 +1,4 @@
 {
       "dev.somewebsite.com": "localhost:1000",
-      "www.someothersite.com": "localhost:2000",
+      "www.someothersite.com": "localhost:2000"
 }

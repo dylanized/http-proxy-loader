@@ -7,7 +7,9 @@ httpProxy = require('http-proxy');
 var sites = require('./config.json');
 
 var options = {
-  router: sites
+  router: {
+      "oskiiapp.labshosting.com": "localhost:2000"
+}
 };
 
 var proxyServer = httpProxy.createServer(options);
