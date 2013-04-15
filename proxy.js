@@ -11,7 +11,7 @@
 // load config file
 
 	var sites = require(config);
-
+console.log(config);
 	var options = {
 	  router : sites
 	};
