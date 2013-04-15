@@ -4,10 +4,10 @@ var http = require('http'),
 httpProxy = require('http-proxy');
 
 // TODO: set path via argument
-var sites = require('.config.json');
+var sites = require('config.json');
 
 var options = {
-  router: sites;
+  router: sites
 };
 
 var proxyServer = httpProxy.createServer(options);
