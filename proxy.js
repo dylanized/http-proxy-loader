@@ -7,7 +7,10 @@ httpProxy = require('http-proxy');
 var sites = require('./config.json');
 
 var options = {
-  router: sites
+  router: {
+      "dev.somewebsite.com": "localhost:1000",
+      "www.someothersite.com": "localhost:2000"
+}
 };
 
 var proxyServer = httpProxy.createServer(options);
