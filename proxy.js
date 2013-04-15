@@ -5,7 +5,10 @@
 
 // check arguments for special config path
 
-	if (process.argv[2]) config = "./" + process.argv[2];
+	if (process.argv[2]) {
+		if (process.argv[2]charAt(0) == "/") config = process.argv[2];
+		else config = "./" + process.argv[2];
+	}
 	else config = './config.json';
 
 // load config file
