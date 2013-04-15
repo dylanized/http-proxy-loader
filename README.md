@@ -32,4 +32,8 @@ You can pass start.sh the following parameters:
 
 bash start.sh config_file.json process_name /path/to/forever/log /path/to/script/log /path/to/http-proxy-loader
 
+Real world example:
+
+bash start.sh ../config.json proxy /sites/.forever/logs /sites/.forever/logs
+
 Note: If you use custom forever log directory, you'll need to make sure the log file exists first.
