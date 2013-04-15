@@ -1,14 +1,22 @@
-// TODO: build forever launcher into JS
+// load libraries
 
-var http = require('http'),
-httpProxy = require('http-proxy');
+	var http = require('http'),
+	httpProxy = require('http-proxy');
 
-// TODO: set path via argument
-var sites = require('./config.json');
+// check arguments for special config path
 
-var options = {
-  router : sites
-};
+	if (process.argv[2]) config = process.argv[2];
+	else config = './config.json';
 
-var proxyServer = httpProxy.createServer(options);
-proxyServer.listen(80);
+// load config file
+
+	var sites = require(config);
+
+	var options = {
+	  router : sites
+	};
+
+// launch proxy server
+
+	var proxyServer = httpProxy.createServer(options);
+	proxyServer.listen(80);
