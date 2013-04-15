@@ -1,15 +1,17 @@
 # set defaults
 DEF_CONFIG=""
-DEF_LOGDIR=.
-DEF_SCRIPTDIR=.
 DEF_NAME=proxy
+DEF_FOREVER_LOGDIR=.
+DEF_CHILD_LOGDIR=.
+DEF_SCRIPTDIR=.
 
 # load parameters
 CONFIG=${1:-$DEF_CONFIG}
-LOGDIR=${2:-$DEF_LOGDIR}
-SCRIPTDIR=${3:-$DEF_SCRIPTDIR}
-NAME=${4:-$DEF_NAME}
+NAME=${2:-$DEF_NAME}
+FOREVER_LOGDIR=${3:-$DEF_FOREVER_LOGDIR}
+CHILD_LOGDIR=${4:-$DEF_CHILD_LOGDIR}
+SCRIPTDIR=${5:-$DEF_SCRIPTDIR}
 
 # start forever
 
-forever start --uid $NAME --append -l $LOGDIR/$NAME.log --outFile $LOGDIR/$NAME.out.log --errFile $LOGDIR/$NAME.err.log $SCRIPTDIR/proxy.js $CONFIG
+forever start --uid $NAME --append -l $FOREVER_LOGDIR/$NAME.log --outFile $CHILD_LOGDIR/$NAME.out.log --errFile $CHILD_LOGDIR/$NAME.err.log $SCRIPTDIR/proxy.js $CONFIG
