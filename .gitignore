@@ -1,2 +1,4 @@
 node_modules/
 config.json
+proxy.err.log
+proxy.out.log
