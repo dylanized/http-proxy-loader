@@ -5,13 +5,13 @@
 
 // check arguments for special config path
 
-	if (process.argv[2]) config = process.argv[2];
+	if (process.argv[2]) config = "./" + process.argv[2];
 	else config = './config.json';
 
 // load config file
 
 	var sites = require(config);
-console.log(config);
+
 	var options = {
 	  router : sites
 	};
