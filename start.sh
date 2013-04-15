@@ -1,3 +1,13 @@
-# TODO: pull out hardcoded paths and names
+# set defaults
+DEF_LOGDIR=.
+DEF_SCRIPTDIR=.
+DEF_NAME=proxy
 
-forever start --uid 'proxy' --append -l /sites/.forever/logs/proxy.log --outFile /sites/.forever/logs/proxy.out.log --errFile /sites/.forever/logs/proxy.err.log /sites/.scripts/proxy.js
+# load parameters
+LOGDIR=${1:-$DEF_LOGDIR}
+SCRIPTDIR=${2:-$DEF_SCRIPTDIR}
+NAME=${3:-$DEF_NAME}
+
+# start forever
+
+forever start --uid $NAME --append -l $LOGDIR/$NAME.log --outFile $LOGDIR/$NAME.out.log --errFile $LOGDIR/$NAME.err.log $SCRIPTDIR/proxy.js
