@@ -8,10 +8,10 @@ This script routes domains/subdomains to their matching Node localhost port. The
 HOW TO RUN:
 ---
 
-# install http-proxy module with 'npm install http-proxy'
-# copy config.json.sample to config.json
-# edit config.json with your domains and Node instances
-# run 'node proxy.js' to launch the proxy server alone
+- install http-proxy module with 'npm install http-proxy'
+- copy config.json.sample to config.json
+- edit config.json with your domains and Node instances
+- run 'node proxy.js' to launch the proxy server alone
 
 You can tell proxy.js to use a different config file like this:
 
@@ -22,9 +22,9 @@ Note: the config file must have a .json extension.
 HOW TO RUN IN THE BACKGROUND:
 ---
 
-# install Forever with 'npm install -g forever'
-# create the default proxy log file with 'touch ~/.forever/proxy'
-# run 'bash start.sh' to launch using the defaults
+- install Forever with 'npm install -g forever'
+- create the default proxy log file with 'touch ~/.forever/proxy'
+- run 'bash start.sh' to launch using the defaults
 
 By default, Forever will the forever output in your system's ~/.forever folder, and put the child script's output and error  files inside your proxy script directory. Start.sh will name all log files the same as your process name, which defaults to 'proxy'.
 
