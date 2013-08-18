@@ -1,0 +1,24 @@
+{
+  "name": "http-proxy-loader",
+  "version": "0.1.1",
+  "description": "loader for node-http-proxy",
+  "main": "proxy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanized/http-proxy-loader.git"
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "author": "dylanized",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/dylanized/http-proxy-loader/issues"
+  },
+  "dependencies": {
+    "http-proxy": "~0.10.3"
+  }
+}

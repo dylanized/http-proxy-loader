@@ -19,4 +19,3 @@ Note: the config file must have a .json extension.
 See how I launch this at startup in http://github.com/dylanized/node-boot
 
 Questions? Hit me up at twitter.com/dylanized
-
